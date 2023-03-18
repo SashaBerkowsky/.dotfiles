@@ -38,7 +38,7 @@ def parseWindowName(windowName) :
     if(len(windowNameWords) > 1) :
         return windowNameWords[len(windowNameWords)- 2] +" "+ windowNameWords[len(windowNameWords)- 1]
     else :
-        return "\t"+windowName
+        return windowName
 
 
 keys = [
@@ -126,7 +126,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="JetBrainsMono Nerd Font",
     fontsize=12,
     padding=3,
 )
@@ -137,24 +137,17 @@ screens = [
         top=bar.Bar(
             [
                 widget.Spacer(length=5),
-                widget.GroupBox(highlight_method="block", font="Fira Code", this_current_screen_border = "#00afb5", foreground = "#ffffff", block_highlight_text_color = "#000000", this_screen_border = "#222e50", other_screen_border = "#00afb5", urgent_border="#dd614a", active="#000000"),
+                widget.GroupBox(highlight_method="block", this_current_screen_border = "#1cfeba", block_highlight_text_color = "#000000", this_screen_border = "#1cfeba", other_screen_border = "#1cfeba", urgent_border="#dd614a", inactive = "#ffffff" ),
                 widget.Prompt(foreground="#000000"),
-                widget.Spacer(length=650),
-                widget.WindowName(parse_text = parseWindowName, font="Fira Code", foreground="#000000", empty_group_string = "\tsasza", padding=25),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
+                widget.Spacer(),
+                widget.WindowName(parse_text = parseWindowName, foreground="#ffffff", empty_group_string = "sasza", width = bar.CALCULATED, padding = 20),
+                widget.Spacer(),
                 widget.Systray( ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p", foreground="#000000", font="Fira Code"),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p", foreground="#ffffff"),
                 widget.Spacer(length=6),
             ],
-            26,
-            background="#ffd166",
+            30,
+           background="#2f2f2f",
 #           background="#83b5c6",
 
             margin=[12,12,0,12]
@@ -181,7 +174,6 @@ screens = [
             ],
             26,
             background="#ffd166",
-#           background="#83b5c6",
 
             margin=[0,12,12,12]
         ),
