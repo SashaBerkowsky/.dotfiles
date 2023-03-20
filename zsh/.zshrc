@@ -1,7 +1,7 @@
-# Aliases
+# aliases
 source ~/.zsh_aliases 
 
-# Set up the prompt
+# set up the prompt
 
 autoload -Uz promptinit
 promptinit
