@@ -1,0 +1,13 @@
+dotfiles() {
+  if [ -z "$1" ] 
+  then
+    cd ~/.dotfiles
+  else
+    if [ -d ~/.dotfiles/$1/.config ]
+    then
+      cd ~/.dotfiles/$1/.config/$1
+    else
+      cd ~/.dotfiles/$1
+    fi
+  fi
+}
