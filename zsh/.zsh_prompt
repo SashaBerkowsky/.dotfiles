@@ -1,0 +1,8 @@
+# colors
+WHITE="%F{15}%"
+BLACK="%F{0}%"
+GREEN_BG="%K{121}"
+
+# prompt
+PROMPT="%B%F{203}saszaツ%fin %F{110}%1d% %f ❯ "
+
