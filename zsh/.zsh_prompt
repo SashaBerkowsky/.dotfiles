@@ -4,5 +4,5 @@ BLACK="%F{0}%"
 GREEN_BG="%K{121}"
 
 # prompt
-PROMPT="%B%F{203}saszaツ%fin %F{110}%1d% %f ❯ "
+PROMPT="%B%F{203}saszaツ%b%fin %F{110}%1~% %f ❯ "
 
