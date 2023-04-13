@@ -4,4 +4,3 @@ picom --config ~/.config/picom/picom.conf --experimental-backends &
 flameshot &
 discord & 
 slack & 
-xrandr --output HDMI-1 --rotate left 
