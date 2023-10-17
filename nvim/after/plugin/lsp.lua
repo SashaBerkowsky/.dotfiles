@@ -134,6 +134,8 @@ lspconfig.rust_analyzer.setup {
   }
 }
 
+lspconfig.bashls.setup {}
+
 vim.diagnostic.config({
     virtual_text = true,
 })
