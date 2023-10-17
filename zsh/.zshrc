@@ -76,6 +76,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Enable vim mode
+bindkey -v
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
