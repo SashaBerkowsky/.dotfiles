@@ -126,6 +126,12 @@ lspconfig.pyright.setup {
   on_attach = on_attach,
 }
 
+lspconfig.bashls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+
+}
+
 lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -134,7 +140,6 @@ lspconfig.rust_analyzer.setup {
   }
 }
 
-lspconfig.bashls.setup {}
 
 vim.diagnostic.config({
     virtual_text = true,
