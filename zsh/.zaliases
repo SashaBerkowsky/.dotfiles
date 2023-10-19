@@ -1,0 +1,5 @@
+#!/bin/zsh
+dotfiles() {
+  DOTFILES_DIR=$(find $HOME/.dotfiles -type d -name $1) || cd $HOME/.dotfiles
+  cd $DOTFILES_DIR
+}
