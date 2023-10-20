@@ -105,5 +105,3 @@ bindkey -v
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias check_battery="cat /sys/class/power_supply/BAT0/capacity"

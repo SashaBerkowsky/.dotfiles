@@ -1,4 +1,6 @@
 #!/bin/zsh
+alias check_battery="cat /sys/class/power_supply/BAT0/capacity"
+
 dotfiles() {
   if [ ! -z "$1" ]
   then
