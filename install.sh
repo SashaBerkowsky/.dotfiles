@@ -1,6 +1,6 @@
 #!/bin/zsh
 CONFIG_PROGRAMS=('nvim' 'picom')
-HOME_PROGRAMS=('tmux' 'zsh')
+HOME_PROGRAMS=('tmux' 'zsh' 'xinit')
 
 for program in "${CONFIG_PROGRAMS[@]}"; do 
   echo 'Adding ' $program
