@@ -1,6 +1,6 @@
-if [ -d "$HOME/.dotfiles/scripts" ]
+if [ -d "$HOME/.dotfiles/scripts/dmenu" ]
 then
-  PATH="$HOME/.dotfiles/scripts:$PATH"
+  PATH="$HOME/.dotfiles/scripts/dmenu:$PATH"
 fi
 
 # start xserver
