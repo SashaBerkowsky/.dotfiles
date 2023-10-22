@@ -16,7 +16,3 @@ dotfiles() {
   fi
 }
 
-wallpapers() {
-  wallpaper=$(ls $HOME/.dotfiles/wallpapers | dmenu -i -l 50)
-  [ $wallpaper -z ] || feh --bg-fill $HOME/.dotfiles/wallpapers/$wallpaper
-}
