@@ -38,6 +38,9 @@ return require("packer").startup(function(use)
   use {'windwp/nvim-ts-autotag'}
   -- for my own sanity 
 
+  -- neat hex color highlighting
+  use 'norcalli/nvim-colorizer.lua'
+
   -- very cool colorscheme (japan!1!)
   use("rebelot/kanagawa.nvim")
 end)
