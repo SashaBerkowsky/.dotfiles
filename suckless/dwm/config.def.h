@@ -15,7 +15,6 @@ static const char dmenufont[]       = "HackNerdFont:size=12";
 static const char uns_background[]       = "#222222";
 static const char uns_border[]       = "#444444";
 static const char uns_foreground[]       = "#FCB5B5";
-// static const char sel_foreground[]       = "#0C0F0A";
 static const char sel_foreground[]       = "#FCDDF2";
 static const char sel_background[]        = "#C52233";
 static const unsigned int baralpha = 225;
