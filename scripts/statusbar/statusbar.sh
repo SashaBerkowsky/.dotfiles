@@ -1,4 +1,5 @@
 #!/bin/sh
+separator="|"
 time=$(date '+󱑆 %H:%M')
 date=$(date '+%B %e, %A')
 
@@ -12,6 +13,6 @@ wifi () {
 
 
 while true; do
-  xsetroot -name " $date | $(wifi)  $(battery)  $time "
-  sleep 60
+  xsetroot -name " $date $separator $(wifi)  $(battery)  $time "
+  sleep 1m
 done
