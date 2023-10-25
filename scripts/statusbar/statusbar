@@ -4,11 +4,11 @@ time=$(date '+󱑆 %H:%M')
 date=$(date '+%B %e, %A')
 
 battery () {
-  ~/.dotfiles/scripts/statusbar/battery.sh
+  ~/.dotfiles/scripts/statusbar/battery
 }
 
 wifi () {
-  ~/.dotfiles/scripts/statusbar/wifi.sh
+  ~/.dotfiles/scripts/statusbar/wifi
 }
 
 

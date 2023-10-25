@@ -1,0 +1,4 @@
+#!/bin/sh
+
+options=('a''b''c')
+$options | dmenu -i -l 50

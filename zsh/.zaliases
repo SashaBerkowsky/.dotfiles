@@ -1,0 +1,17 @@
+#!/bin/zsh
+alias check_battery="cat /sys/class/power_supply/BAT0/capacity"
+
+dotfiles() {
+  directory=$(find $HOME/.dotfiles -type d -not -wholename "*.git*" | fzf)
+  cd $directory
+}
+
+code() {
+  directory=$(find $HOME/code -type d -not -wholename "*.git*" -o -not -wholename "*node_modules*" | fzf)
+  if [ ! -z $directory ]
+  then
+    cd $directory
+    session_name="${"$(basename $directory)"// /-}"
+    tmux new-session -t $session_name
+  fi
+}
