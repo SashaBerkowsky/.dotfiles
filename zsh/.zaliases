@@ -15,3 +15,10 @@ code() {
     tmux new-session -t $session_name
   fi
 }
+
+readpdf() {
+  if [ ! -z $1 ]; then
+    echo $1
+    zathura $1 nohup &
+  fi
+}

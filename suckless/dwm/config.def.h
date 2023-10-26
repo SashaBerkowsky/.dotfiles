@@ -11,7 +11,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "HackNerdFont:size=12" };
-static const char dmenufont[]       = "HackNerdFont:size=12";
+static const char dmenufont[]       = "IosevkaNerdFont:size=10";
 static const char uns_background[]       = "#222222";
 static const char uns_border[]       = "#444444";
 static const char uns_foreground[]       = "#FCB5B5";
@@ -69,7 +69,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", uns_background, "-nf", uns_foreground, "-sb", sel_background, "-sf", sel_foreground, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", uns_background, "-nf", uns_foreground, "-sb", sel_background, "-sf", sel_foreground, "-p" , "App Launcher", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
