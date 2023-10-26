@@ -3,6 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# Source aliases
 source  ~/.dotfiles/zsh/.zaliases
 
 # Set name of the theme to load --- if set to "random", it will
@@ -105,3 +107,5 @@ bindkey -v
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+DOTFILES=$HOME/.dotfiles

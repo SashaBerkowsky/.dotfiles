@@ -1,0 +1,9 @@
+#!/bin/sh
+
+directory=$(find $HOME/.dotfiles -type d -not -wholename "*.git*" | dmenu -i -l 10)
+
+if [ ! -z $directory ]
+then
+  cd $directory 
+  st
+fi
