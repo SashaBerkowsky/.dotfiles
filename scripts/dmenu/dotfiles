@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cd $HOME/.dotfiles
-directory=$(find * -type d -not -wholename "*.git*" | dmenu -i -l 10 -p "dotfiles")
+directory=$(find $HOME/.dotfiles -type d -not -wholename "*.git*" | dmenu -i -l 10 -p "dotfiles")
 
 if [ ! -z $directory ]
 then

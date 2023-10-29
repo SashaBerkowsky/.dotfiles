@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cd $HOME/code
-directory=$(find * -type d -not -wholename "*.git*" -o -not -wholename "*node_modules*" | dmenu -i -l 10)
+directory=$(find $HOME/code -type d -not -wholename "*.git*" -o -not -wholename "*node_modules*" | dmenu -i -l 10)
 
 if [ ! -z $directory ]
 then
