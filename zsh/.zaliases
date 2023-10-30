@@ -7,12 +7,13 @@ dotfiles() {
 }
 
 code() {
-  directory=$(find $HOME/code -type d -not -wholename "*.git*" -o -not -wholename "*node_modules*" | fzf)
+  directory=$(find $HOME/code -type d -not -wholename "*.git*" -a -not -wholename "*node_modules*" | fzf)
   if [ ! -z $directory ]
   then
     cd $directory
-    session_name="${"$(basename $directory)"// /-}"
-    tmux new-session -t $session_name
+    read -p 'Enter session name ' session_name
+    #session_name="${"$(basename $directory)"// /-}"
+    tmux new-session -t $1
   fi
 }
 
