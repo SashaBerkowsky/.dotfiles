@@ -17,7 +17,7 @@ static const char uns_border[]       = "#444444";
 static const char uns_foreground[]       = "#FCB5B5";
 static const char sel_foreground[]       = "#FCDDF2";
 static const char sel_background[]        = "#C52233";
-static const unsigned int baralpha = 225;
+static const unsigned int baralpha = OPAQUE;    /* baralpha = 225 also is good */
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
