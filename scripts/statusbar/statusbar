@@ -8,7 +8,7 @@ getTime() {
 }
 
 getDate() {
-  date=$(date '+%B %e, %A')
+  date=$(date '+%a %e, %b')
 
   echo $date
 }
@@ -23,6 +23,6 @@ wifi () {
 
 
 while true; do
-  xsetroot -name " $(getDate) $separator $(wifi)  $(battery)  $(getTime) "
+  xsetroot -name " $(wifi)  $(battery)  $(getDate) $(getTime) "
   sleep 20
 done
