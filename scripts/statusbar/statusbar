@@ -1,7 +1,17 @@
 #!/bin/sh
 separator="|"
-time=$(date '+󱑆 %H:%M')
-date=$(date '+%B %e, %A')
+
+getTime() {
+  time=$(date '+󱑆 %H:%M')
+  
+  echo $time
+}
+
+getDate() {
+  date=$(date '+%B %e, %A')
+
+  echo $date
+}
 
 battery () {
   ~/.dotfiles/scripts/statusbar/battery
@@ -13,6 +23,6 @@ wifi () {
 
 
 while true; do
-  xsetroot -name " $date $separator $(wifi)  $(battery)  $time "
+  xsetroot -name " $(getDate) $separator $(wifi)  $(battery)  $(getTime) "
   sleep 1m
 done
