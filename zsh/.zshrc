@@ -109,3 +109,6 @@ bindkey -v
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 DOTFILES=$HOME/.dotfiles
+#export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+export PATH="$HOME/.ghcup/bin:$PATH"
+

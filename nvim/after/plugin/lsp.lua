@@ -106,7 +106,7 @@ lspconfig.lua_ls.setup {
   on_attach = on_attach,
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
@@ -132,6 +132,12 @@ lspconfig.bashls.setup {
 
 }
 
+lspconfig.hls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+
+}
+
 lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -139,7 +145,6 @@ lspconfig.rust_analyzer.setup {
     "rustup", "run", "stable", "rust-analyzer"
   }
 }
-
 
 vim.diagnostic.config({
     virtual_text = true,

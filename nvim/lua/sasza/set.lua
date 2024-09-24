@@ -24,7 +24,6 @@ opt.updatetime = 50
 opt.termguicolors = true
 
 -- fix orgmode links
-opt.shellslash = true
 opt.conceallevel = 2
 opt.concealcursor = 'nc'
 
