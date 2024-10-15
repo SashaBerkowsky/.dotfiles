@@ -135,7 +135,11 @@ lspconfig.bashls.setup {
 lspconfig.hls.setup {
   capabilities = capabilities,
   on_attach = on_attach
+}
 
+lspconfig.ltex.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
 }
 
 lspconfig.rust_analyzer.setup {
