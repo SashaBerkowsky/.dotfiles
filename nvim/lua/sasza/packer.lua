@@ -12,7 +12,7 @@ return require("packer").startup(function(use)
 
   use 'williamboman/mason.nvim'
 
-  --LSP autocomplete
+  -- LSP autocomplete
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -40,6 +40,9 @@ return require("packer").startup(function(use)
 
   -- neat hex color highlighting
   use 'norcalli/nvim-colorizer.lua'
+
+  -- latex tools & live compilation
+  use 'lervag/vimtex'
 
   -- very cool colorscheme (japan!1!)
   use("rebelot/kanagawa.nvim")
