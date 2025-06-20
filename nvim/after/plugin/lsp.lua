@@ -116,6 +116,11 @@ lspconfig.tailwindcss.setup {
   on_attach = on_attach
 }
 
+lspconfig.eslint.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
 lspconfig.clangd.setup {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -153,30 +158,3 @@ lspconfig.rust_analyzer.setup {
 vim.diagnostic.config({
     virtual_text = true,
 })
-
--- format on save for prettier
-local null_ls = require 'null-ls'
-local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
-
-null_ls.setup {
-  sources = {
-    null_ls.builtins.formatting.deno_fmt,
-    null_ls.builtins.formatting.prettier.with {
-      filetypes = {'javascript', 'javascriptreact', 'typescript', 'typescriptreact'}
-    }
-  },
-  on_attach = function(client, bufnr)
-    if client.supports_method 'textDocument/formatting' then
-      vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
-      vim.api.nvim_create_autocmd('BufWritePre', {
-        group = augroup,
-        buffer = bufnr,
-        callback = function()
-          -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-          vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 2000 })
-        end,
-      })
-    end
-  end,
-}
-

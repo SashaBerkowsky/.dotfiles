@@ -27,9 +27,6 @@ return require("packer").startup(function(use)
   -- neat autocomplete formatting
   use 'onsails/lspkind.nvim'
 
-  -- i only use this for prettier format on save, idk if it does something else
-  use {'jose-elias-alvarez/null-ls.nvim'}
-
   -- for my own sanity (auto pairs and auto html tags for everything) 
   use {
     "windwp/nvim-autopairs",

@@ -1,0 +1,81 @@
+/* ~/.config/wofi/style.css */
+
+/* --- Global styles --- */
+* {
+    font-family: "BlexMonoNerdFont";
+    font-size: 16px; /* Adjust font size */
+    color: #DDDDDD; /* Default text color */
+}
+
+/* --- The entire Wofi window --- */
+window {
+      /* Use a solid, opaque background color */
+    background-color: #1F1F28; 
+
+    border-radius: 10px; /* For rounded corners on the Wofi box itself */
+    border: 1px solid #444444; /* Subtle border */
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Still good for depth */
+}
+
+/* --- The outer container box --- */
+#outer-box {
+    margin: 10px; /* Space around the content inside the window */
+}
+
+/* --- The input/search box --- */
+#input {
+    background-color: rgba(45, 45, 55, 0.9); /* Slightly different background */
+    border-radius: 8px; /* Rounded corners for the input box */
+    padding: 8px 12px; /* Padding inside the input box */
+    margin-bottom: 10px; /* Space below the input box */
+    border: none; /* No border for input */
+}
+
+/* --- The scrollable area containing entries --- */
+#scroll {
+    /* No specific background, let window background show through */
+}
+
+/* --- The inner box containing all entries --- */
+#inner-box {
+    padding: 5px; /* Padding within the entry list */
+}
+
+/* --- Individual entries (each selectable item) --- */
+#entry {
+    padding: 6px 10px; /* Padding inside each entry */
+    margin: 3px 0; /* Vertical space between entries */
+    border-radius: 6px; /* Rounded corners for entries */
+    background-color: rgba(0, 0, 0, 0); /* Transparent by default to show blur */
+}
+
+/* --- Selected entry --- */
+#entry:selected {
+    background-color: #957FB8;
+    border: 1px solid: #957FB8;
+    color: #FFFFFF; /* Text color for selected item */
+}
+
+/* --- Text within entries --- */
+#text {
+    /* No specific background, usually transparent */
+    padding-left: 5px; /* Space between icon and text if using icons */
+}
+
+/* --- Image/icon within entries (e.g., app icons) --- */
+#img {
+    margin-right: 8px; /* Space between the icon and the text */
+    min-width: 24px; /* Ensure icons have a consistent size */
+    min-height: 24px;
+}
+
+/* --- Specific prompt text in input box --- */
+#input > label {
+    color: #AAAAAA; /* Color of the prompt text */
+}
+
+/* --- Placeholder text in input box --- */
+#input:placeholder-shown {
+    color: #777777; /* Color of the placeholder text */
+}

@@ -6,6 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Source aliases
 source  ~/.dotfiles/zsh/.zaliases
+source /usr/share/nvm/init-nvm.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,4 +112,5 @@ bindkey -v
 DOTFILES=$HOME/.dotfiles
 #export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
+export HYPRSHOT_DIR="$HOME/screenshots"
 
