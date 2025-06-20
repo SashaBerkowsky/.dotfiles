@@ -1,7 +1,6 @@
 # .dotfiles
-My dotfiles that I mostly took from ThePrimeagen
+In order to run my dotfiles:
 
-## dotfiles setup w/stow
 1. Install stow
 2. `cd ~/.dotfiles`
 3. run `bash install.sh` 
