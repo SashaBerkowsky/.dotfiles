@@ -1,5 +1,5 @@
-#!/bin/zsh
-CONFIG_PROGRAMS=('nvim' 'kitty')
+#!/bin/bash
+CONFIG_PROGRAMS=('nvim' 'kitty' 'hypr' 'waybar')
 HOME_PROGRAMS=('tmux' 'zsh')
 
 for program in "${CONFIG_PROGRAMS[@]}"; do 
