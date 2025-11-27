@@ -1,30 +1,31 @@
 local opt = vim.opt
 local g = vim.g
 
-opt.guicursor = ""
-
+-- line numbers
 opt.nu = true
 opt.relativenumber = true
 opt.cursorline = true
 
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
+-- tabs
+opt.shiftwidth = 4
 opt.expandtab = true
+opt.smartindent = true
 
+-- search
 opt.hlsearch = false
 opt.incsearch = true
 
-opt.smartindent = true
-
+-- scroll
 opt.scrolloff = 8
 
+-- input
 opt.updatetime = 50
 
+-- colors
 opt.termguicolors = true
 
--- fix orgmode links
-opt.conceallevel = 2
-opt.concealcursor = 'nc'
+-- clipboard
+opt.clipboard = "unnamedplus"
 
+-- leader
 g.mapleader = " "
