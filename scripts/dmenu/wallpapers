@@ -1,3 +1,0 @@
-#!/bin/sh
-wallpaper=$(ls $HOME/.dotfiles/wallpapers | dmenu -i -l 50 -p "wallpapers")
-[ $wallpaper -z ] || feh --bg-fill $HOME/.dotfiles/wallpapers/$wallpaper

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo -e "poweroff\nreboot\nsuspend" | wofi --show dmenu -p "poweroff" | xargs systemctl
-
