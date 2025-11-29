@@ -207,12 +207,12 @@
 		}
     },
     "hyprland/window": {
-        "format": "{}",
+        "format": "󰀘 {title}",
         "rewrite": {
             "(.*) — Mozilla Firefox": "Mozilla Firefox",
-            "(.*) — Zen Browser": "Zen Browser",
+            "(.*)Zen Browser": "󰀘 Zen Browser",
             "^(?:\\(.*?\\)\\s*)?(Discord)\\s+\\|\\s+.*?\\s+\\|\\s+(.*)$": "$1 | $2",
-            "(^$)": "> sasza"
+            "(^$)": "sasza"
         },
         "separate-outputs": true
     }

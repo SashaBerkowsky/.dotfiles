@@ -139,6 +139,7 @@ button:hover {
 
 .modules-right {
     color: @primary_white;
+    background-color: @primary_black;
     border-radius: 0 0 6px 6px;
     padding: 0 5px;
 }
