@@ -96,16 +96,6 @@
   background-color: @primary_magenta;
 }
 
-progressbar,
-progress,
-trough {
-  border-radius: 12px;
-}
-
-progressbar {
-  background-color: rgba(255,255,255,.1);
-}
-
 /* Notifications expanded-group */
 
 .notification-group {
@@ -271,14 +261,46 @@ progressbar {
     font-size: 0.8rem;
 }
 
-/* Volume */
-.widget-volume {
-  background: @primary_black;
-  color: @primary_white;
-  padding: 4px;
-  margin: 6px;
-  border-radius: 6px;
+/* Containers (mínimo) */
+.widget-volume,
+.widget-backlight {
+    background: transparent;
+    color: @primary_white;
+    padding: 0;
+    margin: 4px 6px;
 }
+
+.widget-volume scale,
+.widget-backlight scale {
+    margin-left: 16px;
+}
+
+/* Barra (trough) */
+.widget-volume scale trough,
+.widget-backlight scale trough {
+    background: @secondary_black;
+    border-radius: 4px;
+    min-height: 3px;   /* grosor de la barra */
+}
+
+/* Parte rellenada */
+.widget-volume scale highlight,
+.widget-backlight scale highlight {
+    background: @primary_magenta;
+    border-radius: 4px;
+}
+
+/* Slider (botón) */
+.widget-volume scale slider,
+.widget-backlight scale slider {
+    background: @primary_white;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;  /* ← más alto que la barra → sobresale */
+    margin-top: -5px;  /* ← hace que sobresalga arriba */
+    margin-bottom: -5px; /* ← y abajo */
+}
+
 
 .widget-menubar {
     color: @primary_white;

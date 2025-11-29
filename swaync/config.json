@@ -42,6 +42,8 @@
   },
   "widgets": [
     "menubar#header",
+    "backlight",
+    "volume",
     "buttons-grid",
     "mpris",
     "title",
@@ -100,8 +102,15 @@
       "image-radius": 12
     },
     "volume": {
-      "label": "󰕾",
-        "show-per-app": true
+      "label": "",
+      "show-per-app-icon": false,
+      "show-per-app": false
+    },
+    "backlight": {
+      "label": "󰃠",
+      "device": "intel_backlight",
+      "subsystem": "backlight",
+      "min": 5
     },
     "buttons-grid": {
       "columns": 5,
