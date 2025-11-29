@@ -18,7 +18,7 @@
 @define-color secondary-white #A8A48D;
 
 * {
-    font-family: JetBrainsMono Nerd Font Mono;
+    font-family: JetBrainsMono Nerd Font;
     font-weight: bold;
     font-size: 13px;
     border: none;
@@ -79,6 +79,8 @@ button:hover {
 
 #workspaces button {
     color: @primary_white;
+    padding-left: 9px;
+    padding-right: 12px;
 }
 
 #workspaces button:hover {
@@ -103,7 +105,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @primary_red;
 }
 
 #mode {
@@ -134,14 +136,12 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
 }
 
 .modules-right {
     color: @primary_white;
     background-color: @primary_black;
     border-radius: 0 0 6px 6px;
-    padding: 0 5px;
 }
 
 /*
@@ -155,7 +155,6 @@ button:hover {
 */
 
 #clock {
-    margin-right: 230px;
     background-color: @primary_black;
     padding: 0 15px;
     border-radius: 0 0 6px 6px;
@@ -164,6 +163,7 @@ button:hover {
 #battery {
     background-color: @primary_black;
     color: @primary_white;
+    border-radius: 0 0 0px 6px;
 }
 
 #battery.charging, #battery.plugged {
@@ -230,7 +230,6 @@ label:focus {
 }
 
 #network {
-    min-width: 24px;
     color: @primary_white;
     background-color: @primary_black;
 }
@@ -243,6 +242,7 @@ label:focus {
     background-color: @primary_black;
     color: @primary_white;
     border-radius: 0 0 0px 6px;
+    padding: 0 2px 0 8px;
 }
 
 #pulseaudio.muted {
@@ -372,4 +372,18 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#custom-notifications { 
+    color: @primary_white;
+    padding: 0 2px 0 8px;
+}
+
+#custom-tag { 
+    background-color: @primary_black;
+    color: @primary_white;
+    padding: 0 15px;
+    border-radius: 0 0 6px 6px;
+    font-size: 18px;
+    margin-right: 10px;
 }
