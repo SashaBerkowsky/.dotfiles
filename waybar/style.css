@@ -230,6 +230,8 @@ label:focus {
 }
 
 #network {
+    min-width: 24px;
+    color: @primary_white;
     background-color: @primary_black;
 }
 

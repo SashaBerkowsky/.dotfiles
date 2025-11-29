@@ -44,7 +44,7 @@
   background: alpha(@primary_black, .90);
   border: 1px solid rgba(595959aa);
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
-  border-radius: 24px;
+  border-radius: 10px;
   margin: 16px;
   padding: 0;
 }

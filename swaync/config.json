@@ -2,13 +2,13 @@
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
-	"cssPriority": "user",
+  "cssPriority": "user",
 
-  "control-center-width": 380,
-  "control-center-height": 860, 
+  "control-center-width": 350,
+  "control-center-height": 460, 
   "control-center-margin-top": 2,
   "control-center-margin-bottom": 2,
-  "control-center-margin-right": 1,
+  "control-center-margin-right": 0,
   "control-center-margin-left": 0,
 
   "notification-window-width": 400,

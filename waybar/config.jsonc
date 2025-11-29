@@ -211,7 +211,7 @@
         "rewrite": {
             "(.*) — Mozilla Firefox": "Mozilla Firefox",
             "(.*)Zen Browser": "󰀘 Zen Browser",
-            "^(?:\\(.*?\\)\\s*)?(Discord)\\s+\\|\\s+.*?\\s+\\|\\s+(.*)$": "$1 | $2",
+            "(.*)Discord(.*)": "󰀘 Discord",
             "(^$)": "sasza"
         },
         "separate-outputs": true
