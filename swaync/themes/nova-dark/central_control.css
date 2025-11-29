@@ -18,8 +18,7 @@
 @define-color secondary-white #A8A48D;
 
 * {
-  color:            @primary_white;
-
+  color: @primary_white;
   all: unset;
   font-size: 16px;
   font-family: "JetBrains Mono Nerd Font 10";
@@ -65,8 +64,8 @@
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  background: alpha(@selected, .6);
   color: @primary_white;
+  background-color: @primary_magenta;
   border-radius: 12px;
   margin: 6px;
 }
@@ -126,17 +125,27 @@ progressbar {
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-  background: transparent;
-  color: @primary_white;
-  margin: 4px; 
-  border-radius: 6px;
-  padding: 4px;
+    background-color: @primary_magenta;  /* change to desired color */
+    color: @primary_white;
+    border-radius: 6px;
+    padding: 4px;
+    margin: 4px;
 }
 
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
-  background: @primary_magenta;
-}  
+    background-color: @primary_magenta;
+}
+
+.notification-group-collapse-button:active,
+.notification-group-close-all-button:active {
+    background-color: @secondary_magenta;
+}
+
+.notification-group-collapse-button:checked,
+.notification-group-close-all-button:checked {
+    background-color: @primary_red; /* collapsed state color */
+}
 
 /* WIDGETS --------------------------------------------------------------------------- */
 
@@ -147,7 +156,7 @@ progressbar {
 }
 
 .widget-title button {
-  background: @primary_black;
+  background: @secondary_black;
   border-radius: 6px;
   padding: 4px 16px;
 }
@@ -167,11 +176,11 @@ progressbar {
 }
 
 .widget-dnd > switch {
-  background: @primary_black;
+  background: @secondary_black;
   font-size: initial;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: none;
-  padding: 2px;
+  padding: 4px;
 }
 
 .widget-dnd > switch:hover {
@@ -188,16 +197,16 @@ progressbar {
 
 .widget-dnd > switch slider {
   background: @primary_white;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 
   /* Buttons menu */
 .widget-buttons-grid {
   font-size: x-large;
-  padding: 8px 2px;
-  margin-bottom: 6px;
+  padding: 10px 0px;
+  margin: 10px 0;
   border-radius: 12px;
-  background: @primary_magenta;
+  background: @secondary_black;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
@@ -208,7 +217,7 @@ progressbar {
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @primary_black;
+  background: @primary_magenta;
 }
 
 .penguin {
@@ -216,6 +225,7 @@ progressbar {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 2px 0 0 2px;
+    padding: 4px;
 }
 
   /* Music player */
@@ -270,3 +280,30 @@ progressbar {
   border-radius: 6px;
 }
 
+.widget-menubar {
+    color: @primary_white;
+}
+
+.widget-menubar button {
+    padding: 6px;
+}
+
+.power-buttons {
+  background-color: @secondary_black;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+}
+
+.power-buttons button {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 12px;
+  text-align: left;
+  float: left;
+
+}
+
+.power-buttons button:hover {
+    background-color: @primary_magenta;
+}
