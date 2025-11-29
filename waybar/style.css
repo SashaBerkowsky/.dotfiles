@@ -1,21 +1,47 @@
+@define-color primary_black #1F1F28;
+@define-color secondary_black #3C3C51;
+@define-color primary_red #E46A78;
+@define-color secondary_red #EC818C;
+@define-color primary_green  #98BC6D;
+@define-color secondary_green #9EC967;
+@define-color primary_yellow  #E5C283;
+@define-color secondary_yellow #F1C982;
+@define-color primary_blue  #7EB3C9;
+@define-color secondary_blue #7BC2DF;
+@define-color primary_magenta  #957FB8;
+@define-color secondary_magenta #A98FD2;
+/*
+@define-color primary_cyan  var(--primary-blue);
+@define-color secondary_cyan var(--secondary-blue);
+*/
+@define-color primary_white  #DDD8BB;
+@define-color secondary-white #A8A48D;
+
 * {
-    font-family: JetBrainsMono Nerd Font Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: JetBrainsMono Nerd Font Mono;
+    font-weight: bold;
     font-size: 13px;
+    border: none;
+}
+
+#window {
+    background-color: @primary_black;
+    padding: 0px 20px;
+    border-radius: 0 0 6px 6px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: transparent;
+    color: @primary_white;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
+/*
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 1.0;
 }
 
-/*
 window#waybar.empty {
     background-color: transparent;
 }
@@ -46,25 +72,34 @@ button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
 }
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
+#workspaces { 
+    background-color: @primary_black;
+    border-radius: 0 0 6px 6px;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+    color: @primary_white;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
+#workspaces button.focused:first-child, #workspaces button.active:first-child {
+    background-color: @primary_magenta;
+    box-shadow: inset 0 3px @primary_white;
+    border-radius: 0 0 0 6px;
+}
+
+#workspaces button.focused:last-child, #workspaces button.active:last-child {
+    background-color: @primary_magenta;
+    box-shadow: inset 0 3px @primary_white;
+    border-radius: 0 0 6px 0;
+}
+
 #workspaces button.focused, #workspaces button.active {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @primary_magenta;
+    box-shadow: inset 0 3px @primary_white;
 }
 
 #workspaces button.urgent {
@@ -102,23 +137,30 @@ button:hover {
     margin: 0 4px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
+.modules-right {
+    background-color: @primary_black;
+    color: @primary_white;
+    border-radius: 0 0 6px 6px;
+    padding: 0 5px;
+}
+
+/*
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
+*/
 
 #clock {
     background-color: #64727D;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @primary_black;
+    color: @primary_white;
 }
 
 #battery.charging, #battery.plugged {
@@ -185,7 +227,7 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: @primary_black;
 }
 
 #network.disconnected {
@@ -193,8 +235,9 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: @primary_black;
+    color: @primary_white;
+    border-radius: 0 0 6px 6px;
 }
 
 #pulseaudio.muted {
@@ -234,7 +277,8 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: @primary_black;
+    border-radius: 0 0 6px 6px;
 }
 
 #tray > .passive {

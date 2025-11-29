@@ -6,11 +6,10 @@ return {
         vim.cmd('hi! LineNr guibg=none ctermbg=none')
 
         -- remove telescope bg
-        vim.cmd('hi! TelescopeBorder guibg=none ctermbg=none')
-        vim.cmd('hi! TelescopeTitle guibg=none ctermbg=none')
+        -- vim.cmd('hi! TelescopeBorder guibg=none ctermbg=none')
+        -- vim.cmd('hi! TelescopeTitle guibg=none ctermbg=none')
 
         require("kanagawa").setup({
-            transparent = false
         })
     end
 }
