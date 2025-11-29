@@ -9,6 +9,7 @@
     "margin-left": 15,
     "margin-right": 15,
     "modules-left": [
+        "clock",
         "hyprland/window"
     ],
     "modules-center": [
@@ -33,26 +34,12 @@
         "active": "",
         "default": ""
       },
-      "width": "1000px",
-      "sort-by-number": true
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "eDP-1": ["1", "2", "3", "4", "5"]
+      }
     },
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -116,7 +103,7 @@
     "clock": {
         "timezone": "America/Argentina/Buenos_Aires",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%d %b %H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -224,6 +211,7 @@
         "rewrite": {
             "(.*) — Mozilla Firefox": "Mozilla Firefox",
             "(.*) — Zen Browser": "Zen Browser",
+            "^(?:\\(.*?\\)\\s*)?(Discord)\\s+\\|\\s+.*?\\s+\\|\\s+(.*)$": "$1 | $2",
             "(^$)": "> sasza"
         },
         "separate-outputs": true

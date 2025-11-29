@@ -138,7 +138,6 @@ button:hover {
 }
 
 .modules-right {
-    background-color: @primary_black;
     color: @primary_white;
     border-radius: 0 0 6px 6px;
     padding: 0 5px;
@@ -155,7 +154,10 @@ button:hover {
 */
 
 #clock {
-    background-color: #64727D;
+    margin-right: 230px;
+    background-color: @primary_black;
+    padding: 0 15px;
+    border-radius: 0 0 6px 6px;
 }
 
 #battery {
@@ -237,7 +239,7 @@ label:focus {
 #pulseaudio {
     background-color: @primary_black;
     color: @primary_white;
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 0px 6px;
 }
 
 #pulseaudio.muted {
@@ -278,7 +280,7 @@ label:focus {
 
 #tray {
     background-color: @primary_black;
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 0;
 }
 
 #tray > .passive {
