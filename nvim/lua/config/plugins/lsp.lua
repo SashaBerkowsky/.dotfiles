@@ -66,5 +66,6 @@ return {
         })
 
         vim.lsp.enable(servers)
+        vim.diagnostic.config { virtual_text = true, virtual_lines = false }
     end
 }
