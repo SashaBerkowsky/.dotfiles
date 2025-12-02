@@ -30,6 +30,10 @@ local configs = {
                 }
             }
         }
+    },
+    rust_analyzer = {
+        capabilities = capabilities,
+        on_attach = on_attach,
     }
 }
 

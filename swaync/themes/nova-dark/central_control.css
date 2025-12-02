@@ -35,19 +35,26 @@
 .control-center {
   background: alpha(@primary_black, .90);
   border-radius: 10px;
-  border: 1px solid rgba(595959aa);
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
-  margin: 5px 16px 18px 18px;
-  padding: 12px;
+  margin: 0px 16px 0 18px;
+  padding: 0px 12px 0 12px;
 }
 
 /* Notifications  */
+.notification {
+    border: 2px solid alpha(@primary_white, .20);
+    border-radius: 8px;
+}
+
+.notification-row {
+    margin-top: 15px;
+}
+
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background-color: @primary_black;
   border-radius: 16px;
-  margin: 4px 0px;
-  padding: 4px;
+  margin: 0px 0px;
 }
 
 .control-center .notification-row .notification-background .notification.critical {
@@ -55,8 +62,8 @@
 }
 
 .control-center .notification-row .notification-background .notification .notification-content {
-  margin: 6px;
-  padding: 8px 6px 2px 2px;
+  margin: 8px;
+  padding: 0 6px 8px 6px;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * {
@@ -82,10 +89,10 @@
 
 .control-center .notification-row .notification-background .close-button {
   background: transparent;
-  border-radius: 6px;
+  border-radius: 16px;
   color: @primary_white;
-  margin: 0px;
-  padding: 4px;
+  margin: 6px;
+  padding: 2px;
 }
 
 .control-center .notification-row .notification-background .close-button:hover {
@@ -100,7 +107,6 @@
 
 .notification-group {
   margin: 2px 8px 2px 8px;
-
 }
 .notification-group-headers {
   font-weight: bold;
@@ -142,7 +148,7 @@
   /* Notification clear button */
 .widget-title {
   font-size: 1.2em;
-  margin: 6px;
+  margin: 9px 6px 6px 6px;
 }
 
 .widget-title button {
@@ -161,7 +167,7 @@
 
   /* Do not disturb */
 .widget-dnd {
-  margin: 6px;
+  margin: 6px 6px 0 6px;
   font-size: 1.2rem;
 }
 
@@ -220,18 +226,15 @@
 
   /* Music player */
 .widget-mpris {
-    background: @primary_black;
-    border-radius: 16px;
+    background: transparent;
     color: @primary_white;
-    margin:  20px 6px;
+    margin: 8px 0;
 }
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
 .widget-mpris-player {
     background-color: @primary_black;
-    border-radius: 22px;
-    padding: 6px 14px;
-    margin: 6px;
+    border-radius: 6px;
 }
 
 .widget-mpris > box > button {
@@ -240,7 +243,8 @@
 }
  
 .widget-mpris button {
-  color: alpha(@primary_white, .6);
+  color: @primary_white;
+    margin-bottom: 14px;
 }
 
 .widget-mpris button:hover {
@@ -303,6 +307,7 @@
 
 
 .widget-menubar {
+    margin-top: 8px;
     color: @primary_white;
 }
 
@@ -318,12 +323,7 @@
 }
 
 .power-buttons button {
-  display: flex;
-  justify-content: space-around;
   border-radius: 12px;
-  text-align: left;
-  float: left;
-
 }
 
 .power-buttons button:hover {

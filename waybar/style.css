@@ -354,12 +354,15 @@ label:focus {
 }
 
 #privacy {
+    margin-right: 5px;
+    padding: 0 5px;
     padding: 0;
 }
 
 #privacy-item {
-    padding: 0 5px;
-    color: white;
+    padding: 0 10px;
+    color: @primary_white;
+    border-radius: 0 0 6px 6px;
 }
 
 #privacy-item.screenshare {

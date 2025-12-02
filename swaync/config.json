@@ -5,8 +5,8 @@
   "cssPriority": "user",
 
   "control-center-width": 350,
-  "control-center-height": 460, 
-  "control-center-margin-top": 2,
+  "control-center-height": 445, 
+  "control-center-margin-top": 9,
   "control-center-margin-bottom": 2,
   "control-center-margin-right": 0,
   "control-center-margin-left": 0,

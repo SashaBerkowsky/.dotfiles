@@ -9,6 +9,7 @@
     "margin-left": 18,
     "margin-right": 18,
     "modules-left": [
+        "privacy",
         "hyprland/window"
     ],
     "modules-center": [
@@ -224,5 +225,33 @@
             "(^$)": "sasza"
         },
         "separate-outputs": true
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 16,
+        "transition-duration": 250,
+        "format": "{icon}",
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24,
+                "icon": ""
+            }
+        ],
+        "format-icons": {
+            "screenshare": ""
+        },
+        "ignore-monitor": true,
+        "ignore": [
+            {
+                "type": "audio-in",
+                "name": "cava"
+            },
+            {
+                "type": "screenshare",
+                "name": "obs"
+            }
+        ]
     }
 }
