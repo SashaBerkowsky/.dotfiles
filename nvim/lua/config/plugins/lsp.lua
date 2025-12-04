@@ -34,6 +34,10 @@ local configs = {
     rust_analyzer = {
         capabilities = capabilities,
         on_attach = on_attach,
+    },
+    ts_ls = {
+        capabilities = capabilities,
+        on_attach = on_attach,
     }
 }
 
