@@ -38,6 +38,10 @@ local configs = {
     ts_ls = {
         capabilities = capabilities,
         on_attach = on_attach,
+    },
+    eslint = {
+        capabilities = capabilities,
+        on_attach = on_attach   
     }
 }
 

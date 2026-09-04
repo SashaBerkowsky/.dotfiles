@@ -1,7 +1,7 @@
 -- telescope
 return {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    branch = "master",
     dependencies = {
         "nvim-lua/plenary.nvim",
         { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
@@ -24,7 +24,9 @@ return {
         vim.keymap.set("n", "<leader>gc", require("telescope.builtin").git_commits)
 
         require("telescope").setup({
-            defaults = { file_ignore_patterns = { "node_modules", ".git" } }
+            defaults = {
+                file_ignore_patterns = { "node_modules", "%.git" }
+            }
         })
     end
 }
