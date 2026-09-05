@@ -7,7 +7,7 @@ opt.relativenumber = true
 opt.cursorline = true
 
 -- tabs
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.smartindent = true
 

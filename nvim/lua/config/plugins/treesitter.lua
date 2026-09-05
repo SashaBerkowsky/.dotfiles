@@ -9,26 +9,23 @@ return {
         config = function()
             local treesitter = require("nvim-treesitter")
 
+            local parsers = {
+                "lua",
+                "c",
+                "cpp",
+                "vim",
+                "markdown",
+                "javascript",
+            }
+
             treesitter.setup({
                 install_dir = vim.fn.stdpath("data") .. "/site",
             })
 
-            treesitter.install({
-                "lua",
-                "c",
-                "vim",
-                "markdown",
-                "javascript",
-            })
+            treesitter.install(parsers)
 
             vim.api.nvim_create_autocmd("FileType", {
-                pattern = {
-                    "lua",
-                    "c",
-                    "vim",
-                    "markdown",
-                    "javascript",
-                },
+                pattern = parsers,
                 callback = function()
                     vim.treesitter.start()
                 end,

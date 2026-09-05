@@ -17,6 +17,17 @@ end
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 local configs = {
+    clangd = {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--completion-style=detailed",
+            "--header-insertion=iwyu",
+        },
+    },
     lua_ls = {
         capabilities = capabilities,
         on_attach = on_attach,
@@ -62,7 +73,7 @@ return {
                 if not client then return end
 
                 ---@diagnostic disable-next-line: missing-parameter, param-type-mismatch
-                if client.supports_method("textDocument/formatting") then
+                if client:supports_method("textDocument/formatting") then
                     vim.api.nvim_create_autocmd("BufWritePre", {
                         buffer = args.buf,
                         callback = function()
